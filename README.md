@@ -5,5 +5,5 @@
 + 📱 | **Mobile App: _Not available._**
 + 🖥️ | **Website/Web App: _Not available._**
 + 🌐 | **API: _Not available._**
-+ ⌨️ | **Console Aplication/Python Aplication: [In the Github repository.](https://https://github.com/Furyforev3r/Decryptia)**
-+ 📦 | **Source Code: [In the Github repository.](https://https://github.com/Furyforev3r/Decryptia)**
++ ⌨️ | **Console Aplication/Python Aplication: [In the Github repository.](https://github.com/Furyforev3r/Decryptia)**
++ 📦 | **Source Code: [In the Github repository.](https://github.com/Furyforev3r/Decryptia)**
