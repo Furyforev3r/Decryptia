@@ -8,6 +8,7 @@ def App():
         encryption = input("""
 - Choose the encryption:
     1. Base64
+    2. Morse Code
 
 - """)
 
@@ -24,6 +25,18 @@ def App():
                         base_input = input("String to encode...\n- ")
                         base_result = decryptia.Base64().Encode(base_input)
                         print(f"Encoded string: {base_result}")
+            case 2:
+                decode_or_encode = input("Decode or Encode? ")
+
+                match decode_or_encode.lower():
+                    case "decode":
+                        morse_input = input("String to decode...\n- ")
+                        morse_result = decryptia.MorseCode().Decode(morse_input)
+                        print(f"Decoded string: {morse_result}")
+                    case "encode":
+                        morse_input = input("String to encode...\n- ")
+                        morse_result = decryptia.MorseCode().Encode(morse_input)
+                        print(f"Encoded string: {morse_result}")
 
         close_input = input("Close program? (Y/N)\n- ")
 
