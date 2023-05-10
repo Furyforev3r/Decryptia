@@ -10,7 +10,7 @@ def App():
     1. Base64
     2. Morse Code
     3. Binary Code
-
+    4. Vinegere Cipher
 - """)
 
         match int(encryption):
@@ -50,6 +50,19 @@ def App():
                         binary_input = input("String to encode...\n- ")
                         binary_result = decryptia.BinaryCode().Encode(binary_input)
                         print(f"Encoded string: {binary_result}")
+            case 4:
+                decode_or_encode = input("Decode or Encode? ")
+                key = input("Key...\n- ")
+
+                match decode_or_encode.lower():
+                    case "decode":
+                        vigenete_input = input("String to decode...\n- ")
+                        vigenete_result = decryptia.VinegereCipher().Decrypt(vigenete_input, key)
+                        print(f"Decoded string: {vigenete_result}")
+                    case "encode":
+                        vigenete_input = input("String to encode...\n- ")
+                        vigenete_result = decryptia.VinegereCipher().Encrypt(vigenete_input, key)
+                        print(f"Encoded string: {vigenete_result}")
 
         close_input = input("Close program? (Y/N)\n- ")
 

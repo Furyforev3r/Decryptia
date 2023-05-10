@@ -297,3 +297,37 @@ class BinaryCode(object):
         decoded_text = ''.join(decoded_string)
 
         return decoded_text
+
+
+class VinegereCipher(object):
+    @staticmethod
+    def Encrypt(plain_text: str, key: str) -> str:
+        encrypted_text = ""
+        key_length = len(key)
+        for i, char in enumerate(plain_text):
+            char_code = ord(char.upper())
+            if char.isalpha():
+                key_char = key[i % key_length].upper()
+                key_code = ord(key_char) - 65
+                encrypted_code = (char_code + key_code) % 26
+                encrypted_char = chr(encrypted_code + 65)
+                encrypted_text += encrypted_char
+            else:
+                encrypted_text += char
+        return encrypted_text
+
+    @staticmethod
+    def Decrypt(encrypted_text: str, key: str) -> str:
+        decrypted_text = ""
+        key_length = len(key)
+        for i, char in enumerate(encrypted_text):
+            char_code = ord(char.upper())
+            if char.isalpha():
+                key_char = key[i % key_length].upper()
+                key_code = ord(key_char) - 65
+                decrypted_code = (char_code - key_code) % 26
+                decrypted_char = chr(decrypted_code + 65)
+                decrypted_text += decrypted_char
+            else:
+                decrypted_text += char
+        return decrypted_text
