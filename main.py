@@ -51,18 +51,18 @@ def App():
                         binary_result = decryptia.BinaryCode().Encode(binary_input)
                         print(f"Encoded string: {binary_result}")
             case 4:
-                decode_or_encode = input("Decode or Encode? ")
+                decode_or_encode = input("Encrypt or Decrypt? ")
                 key = input("Key...\n- ")
 
                 match decode_or_encode.lower():
-                    case "decode":
-                        vigenete_input = input("String to decode...\n- ")
+                    case "decrypt":
+                        vigenete_input = input("String to decrypt...\n- ")
                         vigenete_result = decryptia.VinegereCipher().Decrypt(vigenete_input, key)
-                        print(f"Decoded string: {vigenete_result}")
-                    case "encode":
+                        print(f"Decrypted string: {vigenete_result}")
+                    case "encrypt":
                         vigenete_input = input("String to encode...\n- ")
                         vigenete_result = decryptia.VinegereCipher().Encrypt(vigenete_input, key)
-                        print(f"Encoded string: {vigenete_result}")
+                        print(f"Encrypted string: {vigenete_result}")
 
         close_input = input("Close program? (Y/N)\n- ")
 
