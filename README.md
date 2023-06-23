@@ -1,3 +1,4 @@
+![Decryptia](https://github.com/Furyforev3r/Decryptia/assets/88341564/c08bccb0-4a8a-4f41-9aba-76707d54bdb2)
 # 🔑 | Decryptia
 **Decryptia is a project whose goal is to work with cryptography of all kinds.**
 ## 🚀 | How to use?
